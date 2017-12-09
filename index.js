@@ -24,7 +24,7 @@ client.on('message', msg => {
     }
 
      if (msg.content.startsWith(prefix + 'esay')) {
-        if(msg.channel.permissionsFor(client.user).has("EMBED_LINKS")) {
+        if(!msg.channel.permissionsFor(client.user).has("EMBED_LINKS")) {
             return msg.reply("I am unable to send embeds in this channel.");
         }
         
